@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Include jsPDF for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Include html2canvas for JPG generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <h1>Dynamic Resume Builder by Sufyan🖤</h1>
+  <h4>feel free to make your resume </h4>
+
+  <form id="resumeForm">
+    <!-- Photo Section -->
+    <fieldset>
+      <legend>Upload Photo</legend>
+      <input type="file" id="photo" accept="image/*" />
+    </fieldset>
+
+    <!-- Personal Information Section -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /> <br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required /> <br />
+
+      <label for="cnic">CNIC:</label>
+      <input type="text" id="cnic" name="cnic" required /> <br />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required /><br />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required /><br />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+    </fieldset>
+
+    <!-- Objective Section -->
+    <fieldset>
+      <legend>Objective</legend>
+      <textarea id="objective" name="objective" rows="4" placeholder="Enter your objective here if you dont remember any objective then just copy and paste my written objective ||| 'To enhance my knowledge and capabilities by working in a dynamic organization that prides itself in giving substantial responsibilities to new talent'" required></textarea>
+    </fieldset>
+
+    <!-- Education Section -->
+    <fieldset>
+      <legend>Education</legend>
+      <textarea id="education" name="education" rows="4" placeholder="Enter your education details" required></textarea>
+    </fieldset>
+
+    <!-- Experience Section -->
+    <fieldset>
+      <legend>Experience</legend>
+      <textarea id="experience" name="experience" rows="4" placeholder="Enter your experience details" required></textarea>
+    </fieldset>
+
+    <!-- Skills Section -->
+    <fieldset>
+      <legend>Skills</legend>
+      <textarea id="skills" name="skills" rows="4" placeholder="Enter your skills" required></textarea>
+    </fieldset>
+
+    <!-- Languages Section -->
+    <fieldset>
+      <legend>Languages</legend>
+      <textarea id="languages" name="languages" rows="4" placeholder="Enter your languages" required></textarea>
+    </fieldset>
+
+    <button type="submit">Generate Resume Below</button>
+  </form>
+
+  <div id="resumePreview" class="resume-preview">
+    <h2 style="margin-left: 500px; text-shadow: 2px;">Generated Resume</h2>
+    <div id="resumeOutput"></div>
+  </div>
+
+  <!-- Download buttons -->
+   <form action="download"><button id="downloadHtmlButton">Download Resume (HTML)</button>
+  <button id="downloadPdfButton">Download Resume (PDF)</button>
+  <button id="downloadJpgButton">Download Resume (JPG)</button></form>
+
+  <script src="script.js"></script>
+</body>
+<footer>
+  <h3 style="margin-left: 500px;">made with ❤️ by sufyan </h3>
+</footer>
+</html>
